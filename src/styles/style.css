@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #8EC3B0;
+  text-decoration: none;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+.app-container {
+  color: #FFFFFF;
+  background-color: #BCEAD5;
+  min-height: 100vh;
+  transition: all ease-in-out 0.5s;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: whitesmoke;
+  padding: 20px;
+  font-size: 24px;
+  background-color: #8EC3B0;
+}
+.navigation{
+  font-size: 24px;
+  margin: 8px;
+  float: right;
+  display: flex;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: whitesmoke;
+  color: #BCEAD5;
+  padding: 8px;
+  cursor: pointer;
+}
+main {
+  margin: 0 auto;
+  padding: 32px 0;
+  width: 90%;
+  max-width: 1200px;
+}
+.notes-list {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px 8px;
+}
+.notes-list-empty {
+  margin-top: 32px;
+  padding: 16px 8px;
+}
+.notes-list-empty p {
+  text-align: center;
+  color: whitesmoke;
+}
+.note-item {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #DEF5E5;
+}
+.note-item__title {
+  color: #8EC3B0;
+}
+.note-item__createdAt {
+  color: #8EC3B0;
+  font-size: 14px;
+  margin: 4px 0;
+}
+.note-item__body {
+  color: black;
+  text-align: justify;
+  margin-top: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.detail-page {
+  margin: 0 auto;
+  margin-top: 32px; 
+  width: 90%;
+  font-size: 20px;
+}
+.detail-page__title {
+  font-size: 24px;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  color: #8EC3B0;
+}
+.detail-page__createdAt {
+  color: #8EC3B0;
+}
+.detail-page__body {
+  line-height: 1.5;
+  margin-top: 36px;
+  font-size: 18px;
+  color: #8EC3B0;
+}
+.detail-page__action, .homepage__action, .add-new-page__action {
+  position: fixed;
+  display: flex;
+  gap: 16px;
+  bottom: 32px;
+  right: 32px;
+}
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+  color: #8EC3B0;
+  padding: 8px;
+  cursor: pointer;
+}
+.add-new-page__input {
+  margin-top: 32px;
+}
+.add-new-page__input .add-new-page__input__title {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid whitesmoke;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px;
+}
+.add-new-page__input__title::placeholder {
+  color: whitesmoke;
+}
+.add-new-page__input .add-new-page__input__body {
+  margin-top: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid whitesmoke;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px;
+  min-height: 400px;
+}
+[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: whitesmoke;
+}
+.search-bar input {
+  margin: 16px 0;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  color: #8EC3B0;
+}
+.search-bar input::placeholder {
+  color: whitesmoke;
+}
+.toggle-theme, .toggle-locale {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  margin: 0 16px;
+}
+.toggle-theme {
+  font-size: 36px;
+}
+.toggle-locale {
+  font-size: 28px;
+}
+.input-login, .input-register {
+  margin: 32px 0;
+}
+.input-login label, .input-register label {
+  font-size: 24px;
+  font-weight: lighter;
+}
+.input-login input, .input-register input {
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 3px solid #FFFFFF;
+  color: #BCEAD5;
+}
+.input-login button, .input-register button {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #BCEAD5;
+  cursor: pointer;
+}
+.button-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 650px) {
+  .notes-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-page__title { 
+    font-size: 35px;
+    color: #8EC3B0;
+  }
+}
+@media screen and (min-width: 850px) {
+  .notes-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notes-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
